@@ -27,7 +27,8 @@ def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_
   AS amount_left
   FROM projects
   JOIN pledges
-  ON pledges.project_id = projects.id";
+  ON pledges.project_id = projects.id
+  WHERE pledges.amount => projects.funding_goal";
 
 end
 
